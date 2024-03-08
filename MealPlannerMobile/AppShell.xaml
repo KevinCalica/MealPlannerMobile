@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MealPlannerMobile.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MealPlannerMobile"
+    xmlns:pages="clr-namespace:MealPlannerMobile.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    BackgroundColor="#daa520"
+    Shell.ForegroundColor="Black"
+    Shell.TabBarTitleColor="Black"
+    Shell.TabBarBackgroundColor="#daa520"
+    Title="MealPlannerMobile"
+    >
+    
+    <ShellContent
+        Title="Loading"
+        ContentTemplate="{DataTemplate pages:LoadingPage}"
+        Route="LoadingPage" 
+        Shell.FlyoutItemIsVisible="False"/>
+    <ShellContent
+        Title="Login Page"
+        ContentTemplate="{DataTemplate pages:LoginPage}"
+        Route="LoginPage" 
+        Shell.FlyoutBehavior="Disabled"
+        Shell.FlyoutItemIsVisible="False"/>
+    <TabBar FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+            Title="Home"
+            Icon="dotnet_bot.png"
+             ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        <ShellContent
+             Title="Calendar"
+            Icon="dotnet_bot.png"
+             ContentTemplate="{DataTemplate pages:ListingPage}"
+            Route="ListingPage" />
+        <ShellContent
+            Title="Profile Page"
+            Icon="dotnet_bot.png"
+            ContentTemplate="{DataTemplate pages:ProfilePage}"
+            Route="ProfilePage" />
+    </TabBar>
+
+</Shell>

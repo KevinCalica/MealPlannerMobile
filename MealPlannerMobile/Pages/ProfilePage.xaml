@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MealPlannerMobile.Pages.ProfilePage"
+             Title="Profile">
+   
+
+    <Grid BackgroundColor="white">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="220"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Path Stroke="#fff" Data="m-0.88796,-1l418.88796,0l0,164.55773c-172.13127,46.65025 -295.33361,25.99741 -421,0.73941l2.11204,-165.29714z" Fill="#daa520"/>
+
+
+        <StackLayout>
+            <Frame BackgroundColor="Transparent" HeightRequest="200" WidthRequest="200" CornerRadius="100" Padding="0" Margin="0,60,0,0" HorizontalOptions="Center" BorderColor="black">
+                <Image Source="dotnet_bot.png" Aspect="AspectFill" Margin="0"/>
+            </Frame>
+        </StackLayout>
+
+        <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,70">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="1" Text="USERNAME" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0" Margin="0"/>
+            <Label Grid.Row="2" Text="This is your Profile" HorizontalOptions="Center" FontSize="Subtitle"/>
+
+            <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                <Button Text="Logout" Clicked="Button_Clicked" BackgroundColor="#Daa520" BorderColor="Black" Margin="0,0,0,0" CornerRadius="30" WidthRequest="200"/>
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>
